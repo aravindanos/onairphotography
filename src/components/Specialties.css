@@ -1,0 +1,251 @@
+.specialties {
+  position: relative;
+  background: #f1efe9;
+}
+
+/* Heading */
+
+.specialties-heading {
+  display: grid;
+  grid-template-columns: 1fr 0.8fr;
+  align-items: end;
+  gap: 60px;
+
+  margin-bottom: 70px;
+}
+
+.specialties-heading .section-title em {
+  color: #8b7657;
+  font-weight: 500;
+}
+
+.specialties-intro {
+  max-width: 440px;
+
+  margin-left: auto;
+
+  font-size: 16px;
+  line-height: 1.8;
+
+  color: #68645e;
+}
+
+/* Cards */
+
+.specialties-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 18px;
+}
+
+.specialty-card {
+  position: relative;
+
+  min-height: 285px;
+
+  padding: 30px;
+
+  overflow: hidden;
+
+  border: 1px solid rgba(23, 23, 23, 0.08);
+  border-radius: 25px;
+
+  background:
+    linear-gradient(
+      145deg,
+      rgba(255, 255, 255, 0.92),
+      rgba(247, 244, 237, 0.75)
+    );
+
+  box-shadow:
+    0 18px 40px rgba(30, 28, 23, 0.05),
+    inset 0 1px rgba(255, 255, 255, 0.9);
+
+  transition:
+    transform 0.5s cubic-bezier(0.2, 0.8, 0.2, 1),
+    box-shadow 0.5s ease;
+}
+
+.specialty-card::before {
+  content: "";
+
+  position: absolute;
+
+  width: 180px;
+  height: 180px;
+
+  right: -90px;
+  bottom: -90px;
+
+  border-radius: 50%;
+
+  background: rgba(201, 185, 158, 0.16);
+
+  transition: transform 0.5s ease;
+}
+
+.specialty-card:hover {
+  transform:
+    translateY(-8px)
+    rotateX(2deg)
+    rotateY(-2deg);
+
+  box-shadow:
+    0 30px 60px rgba(30, 28, 23, 0.11),
+    inset 0 1px rgba(255, 255, 255, 1);
+}
+
+.specialty-card:hover::before {
+  transform: scale(1.5);
+}
+
+/* Top */
+
+.specialty-top {
+  position: relative;
+  z-index: 2;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.specialty-number {
+  font-family: "Playfair Display", serif;
+
+  font-size: 19px;
+
+  color: #8b7657;
+}
+
+.specialty-tag {
+  padding: 7px 11px;
+
+  border: 1px solid rgba(23, 23, 23, 0.08);
+  border-radius: 999px;
+
+  font-size: 8px;
+  font-weight: 700;
+
+  letter-spacing: 0.16em;
+
+  color: #77716a;
+}
+
+/* Content */
+
+.specialty-content {
+  position: relative;
+  z-index: 2;
+
+  max-width: 420px;
+
+  margin-top: 55px;
+}
+
+.specialty-content h3 {
+  font-family: "Playfair Display", serif;
+
+  font-size: clamp(25px, 3vw, 35px);
+  line-height: 1.05;
+
+  font-weight: 600;
+  letter-spacing: -0.025em;
+
+  color: #171717;
+}
+
+.specialty-content p {
+  margin-top: 14px;
+
+  max-width: 400px;
+
+  font-size: 13px;
+  line-height: 1.7;
+
+  color: #77736d;
+}
+
+/* Arrow */
+
+.specialty-arrow {
+  position: absolute;
+
+  right: 28px;
+  bottom: 25px;
+
+  width: 42px;
+  height: 42px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: 1px solid rgba(23, 23, 23, 0.1);
+  border-radius: 50%;
+
+  font-size: 18px;
+
+  background: rgba(255, 255, 255, 0.55);
+
+  transition:
+    transform 0.4s ease,
+    background 0.4s ease;
+}
+
+.specialty-card:hover .specialty-arrow {
+  transform: rotate(45deg);
+
+  background: #171717;
+
+  color: #ffffff;
+}
+
+/* Large first card */
+
+.specialty-card:first-child {
+  min-height: 330px;
+}
+
+.specialty-card:first-child .specialty-content h3 {
+  font-size: clamp(30px, 4vw, 46px);
+}
+
+/* Responsive */
+
+@media (max-width: 850px) {
+  .specialties-heading {
+    grid-template-columns: 1fr;
+    gap: 25px;
+  }
+
+  .specialties-intro {
+    margin-left: 0;
+  }
+
+  .specialties-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 600px) {
+  .specialties-heading {
+    margin-bottom: 45px;
+  }
+
+  .specialty-card,
+  .specialty-card:first-child {
+    min-height: 280px;
+
+    padding: 24px;
+  }
+
+  .specialty-content {
+    margin-top: 45px;
+  }
+
+  .specialty-content h3,
+  .specialty-card:first-child .specialty-content h3 {
+    font-size: 29px;
+  }
+}

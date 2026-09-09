@@ -1,0 +1,167 @@
+.app {
+  min-height: 100vh;
+  overflow: hidden;
+  background:
+    radial-gradient(
+      circle at 10% 10%,
+      rgba(205, 184, 145, 0.15),
+      transparent 30%
+    ),
+    radial-gradient(
+      circle at 90% 30%,
+      rgba(220, 210, 190, 0.18),
+      transparent 30%
+    ),
+    #f7f6f2;
+}
+
+.container {
+  width: min(1180px, calc(100% - 40px));
+  margin: 0 auto;
+}
+
+.section {
+  padding: 110px 0;
+}
+
+.section-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+
+  margin-bottom: 18px;
+
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+
+  color: #8b7657;
+}
+
+.section-label::before {
+  content: "";
+  width: 28px;
+  height: 1px;
+  background: #8b7657;
+}
+
+.section-title {
+  max-width: 760px;
+
+  font-family: "Playfair Display", serif;
+  font-size: clamp(42px, 6vw, 76px);
+  line-height: 0.98;
+  font-weight: 600;
+  letter-spacing: -0.04em;
+
+  color: #171717;
+}
+
+.section-description {
+  max-width: 620px;
+  margin-top: 24px;
+
+  font-size: 17px;
+  line-height: 1.8;
+
+  color: #66635e;
+}
+
+/* --------------------------------
+   Buttons
+-------------------------------- */
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+
+  min-height: 52px;
+  padding: 0 26px;
+
+  border-radius: 999px;
+
+  font-size: 14px;
+  font-weight: 700;
+
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease,
+    background 0.3s ease;
+}
+
+.btn:hover {
+  transform: translateY(-3px);
+}
+
+.btn-primary {
+  color: #ffffff;
+  background: #171717;
+
+  box-shadow:
+    0 12px 30px rgba(23, 23, 23, 0.16),
+    inset 0 1px rgba(255, 255, 255, 0.12);
+}
+
+.btn-primary:hover {
+  box-shadow:
+    0 18px 38px rgba(23, 23, 23, 0.22),
+    inset 0 1px rgba(255, 255, 255, 0.12);
+}
+
+.btn-outline {
+  color: #171717;
+  background: rgba(255, 255, 255, 0.55);
+
+  border: 1px solid rgba(23, 23, 23, 0.12);
+
+  backdrop-filter: blur(12px);
+}
+
+.btn-outline:hover {
+  background: #ffffff;
+}
+
+/* --------------------------------
+   3D Card
+-------------------------------- */
+
+.card-3d {
+  position: relative;
+
+  border: 1px solid rgba(23, 23, 23, 0.08);
+  border-radius: 28px;
+
+  background: rgba(255, 255, 255, 0.68);
+
+  box-shadow:
+    0 30px 70px rgba(23, 23, 23, 0.08),
+    0 8px 20px rgba(23, 23, 23, 0.04),
+    inset 0 1px rgba(255, 255, 255, 0.9);
+
+  backdrop-filter: blur(18px);
+}
+
+/* --------------------------------
+   Responsive
+-------------------------------- */
+
+@media (max-width: 768px) {
+  .container {
+    width: min(100% - 28px, 1180px);
+  }
+
+  .section {
+    padding: 80px 0;
+  }
+
+  .section-title {
+    font-size: clamp(40px, 12vw, 58px);
+  }
+
+  .section-description {
+    font-size: 15px;
+  }
+}

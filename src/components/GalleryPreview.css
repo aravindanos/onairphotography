@@ -1,0 +1,616 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&display=swap");
+
+
+/* =========================================================
+   ONAIR PHOTOGRAPHY — HOME IMAGE PREVIEW
+   Unique namespace: onair-preview
+========================================================= */
+
+.onair-preview {
+  width: 100%;
+  padding: 130px 0;
+  background: #f8f8f5;
+  overflow: hidden;
+}
+
+.onair-preview__container {
+  width: min(1400px, 92%);
+  margin: 0 auto;
+}
+
+
+/* =========================================================
+   HEADER
+========================================================= */
+
+.onair-preview__header {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 80px;
+  align-items: end;
+  margin-bottom: 65px;
+}
+
+.onair-preview__eyebrow {
+  display: inline-block;
+  margin-bottom: 18px;
+
+  font-family: "DM Sans", sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 4px;
+
+  color: #777;
+}
+
+.onair-preview__title {
+  margin: 0;
+
+  font-family: "Playfair Display", serif;
+  font-size: clamp(48px, 6vw, 90px);
+  line-height: 0.95;
+  font-weight: 500;
+  letter-spacing: -3px;
+
+  color: #151515;
+}
+
+.onair-preview__title span {
+  display: block;
+
+  font-style: italic;
+  font-weight: 400;
+
+  color: #777;
+}
+
+.onair-preview__description {
+  max-width: 420px;
+  margin: 0 0 5px auto;
+
+  font-family: "DM Sans", sans-serif;
+  font-size: 15px;
+  line-height: 1.8;
+
+  color: #777;
+}
+
+
+/* =========================================================
+   IMAGE GRID
+========================================================= */
+
+.onair-preview__grid {
+  display: grid;
+
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+
+  grid-auto-rows: 90px;
+
+  gap: 18px;
+}
+
+
+/* =========================================================
+   CARD POSITIONS
+========================================================= */
+
+.onair-preview__card--1 {
+  grid-column: span 5;
+  grid-row: span 7;
+}
+
+.onair-preview__card--2 {
+  grid-column: span 4;
+  grid-row: span 5;
+}
+
+.onair-preview__card--3 {
+  grid-column: span 3;
+  grid-row: span 7;
+}
+
+.onair-preview__card--4 {
+  grid-column: span 4;
+  grid-row: span 6;
+}
+
+.onair-preview__card--5 {
+  grid-column: span 5;
+  grid-row: span 7;
+}
+
+.onair-preview__card--6 {
+  grid-column: span 3;
+  grid-row: span 5;
+}
+
+.onair-preview__card--7 {
+  grid-column: span 3;
+  grid-row: span 6;
+}
+
+.onair-preview__card--8 {
+  grid-column: span 4;
+  grid-row: span 7;
+}
+
+.onair-preview__card--9 {
+  grid-column: span 5;
+  grid-row: span 6;
+}
+
+.onair-preview__card--10 {
+  grid-column: span 3;
+  grid-row: span 6;
+}
+
+.onair-preview__card--11 {
+  grid-column: span 4;
+  grid-row: span 7;
+}
+
+.onair-preview__card--12 {
+  grid-column: span 5;
+  grid-row: span 6;
+}
+
+.onair-preview__card--13 {
+  grid-column: span 3;
+  grid-row: span 7;
+}
+
+.onair-preview__card--14 {
+  grid-column: span 4;
+  grid-row: span 6;
+}
+
+
+/* =========================================================
+   CARD
+========================================================= */
+
+.onair-preview__card {
+  position: relative;
+
+  min-width: 0;
+
+  perspective: 1000px;
+}
+
+
+/* =========================================================
+   IMAGE
+========================================================= */
+
+.onair-preview__media {
+  position: relative;
+
+  width: 100%;
+  height: 100%;
+
+  overflow: hidden;
+
+  background: #e8e8e4;
+
+  border-radius: 4px;
+
+  cursor: pointer;
+
+  transform-style: preserve-3d;
+
+  transition:
+    box-shadow 0.5s ease,
+    transform 0.5s ease;
+}
+
+.onair-preview__media img {
+  width: 100%;
+  height: 100%;
+
+  display: block;
+
+  object-fit: cover;
+  object-position: center;
+
+  transition:
+    transform 1s cubic-bezier(0.2, 0.7, 0.2, 1),
+    filter 0.7s ease;
+}
+
+
+/* =========================================================
+   OVERLAY
+========================================================= */
+
+.onair-preview__overlay {
+  position: absolute;
+
+  inset: 0;
+
+  display: flex;
+  align-items: flex-end;
+
+  padding: 28px;
+
+  background:
+    linear-gradient(
+      to top,
+      rgba(0, 0, 0, 0.72),
+      rgba(0, 0, 0, 0.05) 65%,
+      transparent
+    );
+
+  opacity: 0;
+
+  transition:
+    opacity 0.5s ease;
+}
+
+.onair-preview__overlay-content {
+  position: relative;
+
+  width: 100%;
+
+  transform: translateY(25px);
+
+  transition:
+    transform 0.6s cubic-bezier(0.2, 0.7, 0.2, 1);
+}
+
+
+/* =========================================================
+   CATEGORY
+========================================================= */
+
+.onair-preview__category {
+  display: block;
+
+  margin-bottom: 7px;
+
+  font-family: "DM Sans", sans-serif;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+
+  color: rgba(255, 255, 255, 0.65);
+}
+
+
+/* =========================================================
+   TITLE
+========================================================= */
+
+.onair-preview__item-title {
+  margin: 0;
+
+  font-family: "Playfair Display", serif;
+  font-size: clamp(20px, 2vw, 30px);
+  font-weight: 500;
+
+  color: #fff;
+}
+
+
+/* =========================================================
+   NUMBER
+========================================================= */
+
+.onair-preview__number {
+  position: absolute;
+
+  right: 0;
+  bottom: 0;
+
+  font-family: "DM Sans", sans-serif;
+  font-size: 11px;
+  letter-spacing: 2px;
+
+  color: rgba(255, 255, 255, 0.65);
+}
+
+
+/* =========================================================
+   DESKTOP HOVER
+========================================================= */
+
+.onair-preview__card:hover {
+  z-index: 5;
+}
+
+.onair-preview__card:hover .onair-preview__media {
+  transform: translateY(-4px);
+
+  box-shadow:
+    0 30px 70px rgba(0, 0, 0, 0.18),
+    0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+.onair-preview__card:hover .onair-preview__media img {
+  transform: scale(1.08);
+  filter: brightness(0.85);
+}
+
+.onair-preview__card:hover .onair-preview__overlay {
+  opacity: 1;
+}
+
+.onair-preview__card:hover .onair-preview__overlay-content {
+  transform: translateY(0);
+}
+
+
+/* =========================================================
+   BOTTOM
+========================================================= */
+
+.onair-preview__bottom {
+  display: flex;
+  align-items: center;
+
+  gap: 25px;
+
+  margin-top: 55px;
+}
+
+.onair-preview__bottom p {
+  flex-shrink: 0;
+
+  margin: 0;
+
+  font-family: "Playfair Display", serif;
+  font-size: 16px;
+  font-style: italic;
+
+  color: #777;
+}
+
+.onair-preview__line {
+  width: 100%;
+  height: 1px;
+
+  background: #deded9;
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 1000px) {
+
+  .onair-preview {
+    padding: 90px 0;
+  }
+
+  .onair-preview__header {
+    grid-template-columns: 1fr;
+
+    gap: 25px;
+  }
+
+  .onair-preview__description {
+    margin: 0;
+  }
+
+  .onair-preview__grid {
+    grid-template-columns: repeat(6, minmax(0, 1fr));
+
+    grid-auto-rows: 90px;
+  }
+
+
+  .onair-preview__card--1,
+  .onair-preview__card--3,
+  .onair-preview__card--5,
+  .onair-preview__card--7,
+  .onair-preview__card--9,
+  .onair-preview__card--11,
+  .onair-preview__card--13 {
+    grid-column: span 3;
+  }
+
+  .onair-preview__card--2,
+  .onair-preview__card--4,
+  .onair-preview__card--6,
+  .onair-preview__card--8,
+  .onair-preview__card--10,
+  .onair-preview__card--12,
+  .onair-preview__card--14 {
+    grid-column: span 3;
+  }
+
+
+  .onair-preview__card--1,
+  .onair-preview__card--3,
+  .onair-preview__card--5,
+  .onair-preview__card--7,
+  .onair-preview__card--9,
+  .onair-preview__card--11,
+  .onair-preview__card--13 {
+    grid-row: span 6;
+  }
+
+  .onair-preview__card--2,
+  .onair-preview__card--4,
+  .onair-preview__card--6,
+  .onair-preview__card--8,
+  .onair-preview__card--10,
+  .onair-preview__card--12,
+  .onair-preview__card--14 {
+    grid-row: span 5;
+  }
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 650px) {
+
+  .onair-preview {
+    padding: 70px 0;
+  }
+
+  .onair-preview__container {
+    width: 90%;
+  }
+
+  .onair-preview__header {
+    margin-bottom: 40px;
+  }
+
+  .onair-preview__title {
+    font-size: 48px;
+    letter-spacing: -2px;
+  }
+
+  .onair-preview__description {
+    font-size: 14px;
+    line-height: 1.7;
+  }
+
+
+  .onair-preview__grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+
+    grid-auto-rows: 170px;
+
+    gap: 10px;
+  }
+
+
+  /* Reset all desktop/tablet positions */
+
+  .onair-preview__card,
+  .onair-preview__card--1,
+  .onair-preview__card--2,
+  .onair-preview__card--3,
+  .onair-preview__card--4,
+  .onair-preview__card--5,
+  .onair-preview__card--6,
+  .onair-preview__card--7,
+  .onair-preview__card--8,
+  .onair-preview__card--9,
+  .onair-preview__card--10,
+  .onair-preview__card--11,
+  .onair-preview__card--12,
+  .onair-preview__card--13,
+  .onair-preview__card--14 {
+
+    grid-column: span 1;
+    grid-row: span 2;
+  }
+
+
+  /* Featured images */
+
+  .onair-preview__card--1,
+  .onair-preview__card--5,
+  .onair-preview__card--9 {
+
+    grid-column: span 2;
+    grid-row: span 3;
+  }
+
+
+  /* Always visible mobile overlay */
+
+  .onair-preview__overlay {
+    padding: 18px;
+
+    opacity: 1;
+  }
+
+  .onair-preview__overlay-content {
+    transform: translateY(0);
+  }
+
+  .onair-preview__item-title {
+    font-size: 19px;
+  }
+
+  .onair-preview__category {
+    font-size: 8px;
+  }
+
+  .onair-preview__bottom {
+    margin-top: 35px;
+
+    gap: 12px;
+  }
+
+  .onair-preview__bottom p {
+    font-size: 13px;
+
+    text-align: center;
+  }
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 420px) {
+
+  .onair-preview__container {
+    width: 92%;
+  }
+
+  .onair-preview__title {
+    font-size: 43px;
+  }
+
+  .onair-preview__grid {
+    gap: 8px;
+
+    grid-auto-rows: 145px;
+  }
+
+  .onair-preview__overlay {
+    padding: 14px;
+  }
+
+  .onair-preview__item-title {
+    font-size: 17px;
+  }
+}
+
+
+/* =========================================================
+   TOUCH DEVICES
+========================================================= */
+
+@media (hover: none) {
+
+  .onair-preview__card:hover {
+    z-index: auto;
+  }
+
+  .onair-preview__card:hover .onair-preview__media {
+    transform: none;
+  }
+
+  .onair-preview__card:hover .onair-preview__media img {
+    transform: none;
+    filter: none;
+  }
+}
+
+
+/* =========================================================
+   REDUCED MOTION
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+  .onair-preview__media,
+  .onair-preview__media img,
+  .onair-preview__overlay,
+  .onair-preview__overlay-content {
+    transition: none;
+  }
+}

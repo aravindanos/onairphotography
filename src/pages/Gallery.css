@@ -1,0 +1,1724 @@
+/* =====================================================
+   ONAIR PHOTOGRAPHY
+   PREMIUM 3D GALLERY
+===================================================== */
+
+.gallery-page {
+  --ivory: #f5f2eb;
+  --cream: #ebe5da;
+  --dark: #181816;
+  --muted: #777269;
+  --gold: #98866a;
+  --line: rgba(24, 24, 22, 0.13);
+
+  width: 100%;
+  overflow: hidden;
+  background: var(--ivory);
+  color: var(--dark);
+}
+
+.gallery-container {
+  width: min(1280px, calc(100% - 80px));
+  margin: 0 auto;
+}
+
+
+/* =====================================================
+   HERO
+===================================================== */
+
+.gallery-hero {
+  min-height: 88vh;
+  display: flex;
+  align-items: center;
+  padding: 130px 0 55px;
+  border-bottom: 1px solid var(--line);
+}
+
+.gallery-top-line {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  align-items: center;
+
+  font-family: "Montserrat", sans-serif;
+  font-size: 8px;
+  font-weight: 700;
+  letter-spacing: 2.5px;
+  color: var(--gold);
+}
+
+.gallery-top-line span:nth-child(2) {
+  text-align: center;
+}
+
+.gallery-top-line span:last-child {
+  text-align: right;
+}
+
+.gallery-hero-content {
+  min-height: 62vh;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  padding: 70px 0;
+}
+
+.gallery-label {
+  display: block;
+
+  margin-bottom: 24px;
+
+  font-family: "Montserrat", sans-serif;
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 3px;
+
+  color: var(--gold);
+}
+
+.gallery-hero h1 {
+  margin: 0;
+
+  font-family: "Playfair Display", serif;
+  font-size: clamp(80px, 11vw, 155px);
+  font-weight: 500;
+
+  line-height: 0.82;
+  letter-spacing: -7px;
+}
+
+.gallery-hero h1 em {
+  color: var(--gold);
+  font-weight: 400;
+}
+
+.gallery-hero-content p {
+  width: min(100%, 500px);
+
+  margin: 45px 0 30px;
+
+  font-family: "Montserrat", sans-serif;
+  font-size: 13px;
+  line-height: 2;
+
+  color: var(--muted);
+}
+
+.gallery-explore {
+  width: fit-content;
+
+  display: inline-flex;
+  align-items: center;
+  gap: 14px;
+
+  text-decoration: none;
+
+  font-family: "Montserrat", sans-serif;
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 2px;
+
+  color: var(--dark);
+}
+
+.gallery-explore svg {
+  width: 18px;
+  height: 18px;
+
+  transition: transform 0.3s ease;
+}
+
+.gallery-explore:hover svg {
+  transform: translateY(5px);
+}
+
+.gallery-hero-bottom {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  gap: 20px;
+
+  font-family: "Montserrat", sans-serif;
+  font-size: 8px;
+  font-weight: 600;
+  letter-spacing: 2px;
+
+  color: #a19a8d;
+}
+
+.gallery-hero-bottom div {
+  width: 100%;
+  height: 1px;
+  background: var(--line);
+}
+
+
+/* =====================================================
+   INTRO
+===================================================== */
+
+.gallery-intro {
+  padding: 150px 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.gallery-intro-grid {
+  display: grid;
+  grid-template-columns: 240px minmax(0, 1fr);
+  gap: 100px;
+}
+
+.gallery-index {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.gallery-index span {
+  font-family: "Playfair Display", serif;
+  font-size: 22px;
+}
+
+.gallery-index small {
+  font-family: "Montserrat", sans-serif;
+  font-size: 8px;
+  font-weight: 700;
+  letter-spacing: 2px;
+
+  color: var(--gold);
+}
+
+.gallery-intro-content {
+  max-width: 900px;
+}
+
+.gallery-intro-content h2,
+.gallery-heading h2,
+.gallery-philosophy h2,
+.gallery-cta h2 {
+  margin: 0;
+
+  font-family: "Playfair Display", serif;
+  font-weight: 500;
+
+  line-height: 0.92;
+  letter-spacing: -4px;
+}
+
+.gallery-intro-content h2 {
+  font-size: clamp(55px, 7vw, 95px);
+}
+
+.gallery-intro-content h2 em,
+.gallery-heading h2 em,
+.gallery-philosophy h2 em,
+.gallery-cta h2 em {
+  color: var(--gold);
+  font-weight: 400;
+}
+
+.gallery-intro-content p {
+  max-width: 650px;
+
+  margin: 45px 0 0;
+
+  font-family: "Montserrat", sans-serif;
+  font-size: 13px;
+  line-height: 2;
+
+  color: var(--muted);
+}
+
+
+/* =====================================================
+   COLLECTION
+===================================================== */
+
+.gallery-collection {
+  padding: 150px 0;
+}
+
+.gallery-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+
+  margin-bottom: 75px;
+}
+
+.gallery-heading h2 {
+  font-size: clamp(55px, 6vw, 90px);
+}
+
+.gallery-heading-side {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 6px;
+}
+
+.gallery-heading-side span {
+  font-family: "Playfair Display", serif;
+  font-size: 35px;
+}
+
+.gallery-heading-side small {
+  font-family: "Montserrat", sans-serif;
+  font-size: 8px;
+  letter-spacing: 2px;
+  color: var(--gold);
+}
+
+
+/* =====================================================
+   PERFECT 3 COLUMN GRID
+===================================================== */
+
+.gallery-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(3, minmax(0, 1fr));
+
+  gap: 70px 28px;
+
+  align-items: start;
+  height: 1300px;
+}
+
+
+/* Remove all manual positioning */
+
+.gallery-card {
+  min-width: 0;
+  width: 100%;
+  cursor: pointer;
+}
+
+
+/* =====================================================
+   3D CARD
+===================================================== */
+
+.gallery-card-inner {
+  position: relative;
+
+  transform-style: preserve-3d;
+
+  transition:
+    transform 0.6s cubic-bezier(0.2, 0.7, 0.2, 1),
+    filter 0.6s ease;
+}
+
+.gallery-card:hover .gallery-card-inner {
+  transform:
+    translateY(-10px)
+    perspective(1000px)
+    rotateX(1deg)
+    rotateY(-1deg);
+}
+
+
+/* =====================================================
+   IMAGE BOX
+===================================================== */
+
+.gallery-image {
+  position: relative;
+
+  width: 100%;
+
+  aspect-ratio: 4 / 5;
+
+  overflow: hidden;
+
+  background: #ddd8ce;
+
+  box-shadow:
+    0 15px 30px rgba(30, 27, 22, 0.08),
+    0 35px 70px rgba(30, 27, 22, 0.05);
+
+  transform: translateZ(0);
+}
+
+
+/* Keep image inside box */
+
+.gallery-image img {
+  width: 100%;
+  height: 100%;
+
+  display: block;
+
+  object-fit: cover;
+  object-position: center;
+
+  transform: scale(1.001);
+
+  transition:
+    transform 0.9s cubic-bezier(0.2, 0.7, 0.2, 1),
+    filter 0.6s ease;
+}
+
+.gallery-card:hover .gallery-image img {
+  transform: scale(1.06);
+}
+
+
+/* =====================================================
+   IMAGE NUMBER
+===================================================== */
+
+.gallery-number {
+  position: absolute;
+
+  top: 18px;
+  left: 18px;
+
+  z-index: 3;
+
+  width: 35px;
+  height: 35px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: 1px solid rgba(255, 255, 255, 0.7);
+  border-radius: 50%;
+
+  background: rgba(20, 20, 18, 0.2);
+
+  backdrop-filter: blur(8px);
+
+  color: #fff;
+
+  font-family: "Montserrat", sans-serif;
+  font-size: 8px;
+  letter-spacing: 1px;
+}
+
+
+/* =====================================================
+   HOVER OVERLAY
+===================================================== */
+
+.gallery-overlay {
+  position: absolute;
+  inset: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+
+  background: rgba(20, 20, 18, 0.25);
+
+  opacity: 0;
+
+  transition: opacity 0.45s ease;
+}
+
+.gallery-card:hover .gallery-overlay {
+  opacity: 1;
+}
+
+.gallery-overlay > span {
+  font-family: "Montserrat", sans-serif;
+  font-size: 8px;
+  font-weight: 700;
+  letter-spacing: 2px;
+
+  color: #fff;
+}
+
+.gallery-overlay-icon {
+  width: 40px;
+  height: 40px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: 1px solid rgba(255, 255, 255, 0.7);
+  border-radius: 50%;
+
+  color: #fff;
+}
+
+.gallery-overlay-icon svg {
+  width: 16px;
+}
+
+
+/* =====================================================
+   CARD INFORMATION
+===================================================== */
+
+.gallery-card-details {
+  min-height: 72px;
+
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+
+  padding-top: 18px;
+
+  border-bottom: 1px solid var(--line);
+}
+
+.gallery-card-details > div {
+  min-width: 0;
+}
+
+.gallery-category {
+  display: block;
+
+  margin-bottom: 7px;
+
+  font-family: "Montserrat", sans-serif;
+  font-size: 8px;
+  font-weight: 700;
+  letter-spacing: 2px;
+
+  text-transform: uppercase;
+
+  color: var(--gold);
+}
+
+.gallery-card-details h3 {
+  margin: 0;
+
+  font-family: "Playfair Display", serif;
+  font-size: 22px;
+  font-weight: 500;
+
+  line-height: 1.15;
+}
+
+.gallery-card-details > svg {
+  flex: 0 0 auto;
+
+  margin-top: 5px;
+
+  width: 17px;
+  height: 17px;
+
+  color: #9c968b;
+
+  transition: transform 0.3s ease;
+}
+
+.gallery-card:hover .gallery-card-details > svg {
+  transform: translate(4px, -4px);
+}
+
+
+/* =====================================================
+   PHILOSOPHY
+===================================================== */
+
+.gallery-philosophy {
+  padding: 150px 0;
+
+  background: var(--cream);
+}
+
+.gallery-philosophy-grid {
+  display: grid;
+  grid-template-columns: 240px minmax(0, 1fr);
+
+  gap: 100px;
+}
+
+.gallery-philosophy h2 {
+  font-size: clamp(60px, 7vw, 100px);
+}
+
+.gallery-philosophy p {
+  max-width: 620px;
+
+  margin: 45px 0 0;
+
+  font-family: "Montserrat", sans-serif;
+  font-size: 13px;
+  line-height: 2;
+
+  color: var(--muted);
+}
+
+
+/* =====================================================
+   CTA
+===================================================== */
+
+.gallery-cta {
+  padding: 120px 0 150px;
+}
+
+.gallery-cta-top {
+  display: flex;
+  justify-content: space-between;
+
+  padding-bottom: 22px;
+
+  border-bottom: 1px solid var(--line);
+
+  font-family: "Montserrat", sans-serif;
+  font-size: 8px;
+  font-weight: 700;
+  letter-spacing: 2px;
+
+  color: var(--gold);
+}
+
+.gallery-cta-content {
+  padding-top: 100px;
+}
+
+.gallery-cta h2 {
+  font-size: clamp(65px, 9vw, 130px);
+}
+
+.gallery-cta-button {
+  width: 150px;
+  height: 150px;
+
+  margin-top: 65px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+
+  border: 1px solid rgba(24, 24, 22, 0.3);
+  border-radius: 50%;
+
+  color: var(--dark);
+  text-decoration: none;
+
+  font-family: "Montserrat", sans-serif;
+  font-size: 8px;
+  font-weight: 700;
+  letter-spacing: 2px;
+
+  transition:
+    background 0.4s ease,
+    color 0.4s ease,
+    transform 0.4s ease;
+}
+
+.gallery-cta-button svg {
+  width: 19px;
+  height: 19px;
+
+  transition: transform 0.3s ease;
+}
+
+.gallery-cta-button:hover {
+  background: var(--dark);
+  color: #fff;
+
+  transform: rotate(-7deg);
+}
+
+.gallery-cta-button:hover svg {
+  transform: translate(5px, -5px);
+}
+
+
+/* =====================================================
+   LIGHTBOX
+===================================================== */
+
+.gallery-lightbox {
+  position: fixed;
+  inset: 0;
+
+  z-index: 9999;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 40px;
+
+  background: rgba(14, 14, 13, 0.96);
+
+  animation: galleryFade 0.25s ease;
+}
+
+@keyframes galleryFade {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+.gallery-lightbox-close {
+  position: absolute;
+
+  top: 25px;
+  right: 30px;
+
+  width: 50px;
+  height: 50px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  border-radius: 50%;
+
+  background: transparent;
+
+  color: #fff;
+
+  cursor: pointer;
+
+  transition: 0.3s ease;
+}
+
+.gallery-lightbox-close:hover {
+  background: #fff;
+  color: var(--dark);
+}
+
+.gallery-lightbox-box {
+  width: min(1100px, 90vw);
+}
+
+.gallery-lightbox-box img {
+  width: 100%;
+  max-height: 78vh;
+
+  display: block;
+
+  object-fit: contain;
+}
+
+.gallery-lightbox-info {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+
+  padding-top: 18px;
+
+  color: #fff;
+}
+
+.gallery-lightbox-info > span {
+  font-family: "Montserrat", sans-serif;
+  font-size: 8px;
+  letter-spacing: 2px;
+  opacity: 0.55;
+}
+
+.gallery-lightbox-info small {
+  display: block;
+
+  margin-bottom: 5px;
+
+  font-family: "Montserrat", sans-serif;
+  font-size: 8px;
+  letter-spacing: 2px;
+
+  text-transform: uppercase;
+
+  opacity: 0.55;
+}
+
+.gallery-lightbox-info h3 {
+  margin: 0;
+
+  font-family: "Playfair Display", serif;
+  font-size: 25px;
+  font-weight: 400;
+}
+
+/* =====================================================
+   RESPONSIVE DESIGN
+   ONAIR PHOTOGRAPHY GALLERY
+===================================================== */
+
+/* =====================================================
+   LARGE DESKTOP
+   1400px+
+===================================================== */
+
+@media screen and (min-width: 1400px) {
+
+  .gallery-container {
+    width: min(1320px, calc(100% - 100px));
+  }
+
+  .gallery-hero {
+    min-height: 92vh;
+    padding-top: 140px;
+  }
+
+  .gallery-hero-content {
+    min-height: 64vh;
+  }
+
+  .gallery-hero h1 {
+    font-size: clamp(100px, 10vw, 160px);
+  }
+
+  .gallery-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 80px 32px;
+    height: auto;
+  }
+
+  .gallery-image {
+    aspect-ratio: 4 / 5;
+  }
+
+  .gallery-intro {
+    padding: 170px 0;
+  }
+
+  .gallery-collection {
+    padding: 170px 0;
+  }
+
+  .gallery-philosophy {
+    padding: 170px 0;
+  }
+
+  .gallery-cta {
+    padding: 140px 0 170px;
+  }
+}
+
+
+/* =====================================================
+   DESKTOP
+   1200px - 1399px
+===================================================== */
+
+@media screen and (min-width: 1200px) and (max-width: 1399px) {
+
+  .gallery-container {
+    width: min(1180px, calc(100% - 80px));
+  }
+
+  .gallery-hero h1 {
+    font-size: clamp(90px, 10vw, 140px);
+  }
+
+  .gallery-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 65px 26px;
+    height: auto;
+  }
+
+  .gallery-image {
+    aspect-ratio: 4 / 5;
+  }
+}
+
+
+/* =====================================================
+   LAPTOP
+   901px - 1199px
+===================================================== */
+
+@media screen and (min-width: 901px) and (max-width: 1199px) {
+
+  .gallery-container {
+    width: calc(100% - 70px);
+    max-width: 1100px;
+  }
+
+  /* HERO */
+
+  .gallery-hero {
+    min-height: 85vh;
+    padding: 120px 0 50px;
+  }
+
+  .gallery-hero-content {
+    min-height: 58vh;
+    padding: 60px 0;
+  }
+
+  .gallery-hero h1 {
+    font-size: clamp(80px, 11vw, 125px);
+    letter-spacing: -5px;
+  }
+
+  .gallery-hero-content p {
+    max-width: 460px;
+    font-size: 12px;
+  }
+
+  /* INTRO */
+
+  .gallery-intro {
+    padding: 120px 0;
+  }
+
+  .gallery-intro-grid,
+  .gallery-philosophy-grid {
+    grid-template-columns: 180px minmax(0, 1fr);
+    gap: 60px;
+  }
+
+  .gallery-intro-content h2 {
+    font-size: clamp(55px, 7vw, 80px);
+  }
+
+  /* COLLECTION */
+
+  .gallery-collection {
+    padding: 120px 0;
+  }
+
+  .gallery-heading {
+    margin-bottom: 60px;
+  }
+
+  .gallery-heading h2 {
+    font-size: clamp(55px, 7vw, 80px);
+  }
+
+  /* GRID */
+
+  .gallery-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 55px 22px;
+    height: auto;
+  }
+
+  .gallery-image {
+    aspect-ratio: 4 / 5;
+  }
+
+  .gallery-card-details {
+    min-height: 68px;
+  }
+
+  .gallery-card-details h3 {
+    font-size: 20px;
+  }
+
+  /* PHILOSOPHY */
+
+  .gallery-philosophy {
+    padding: 120px 0;
+  }
+
+  .gallery-philosophy h2 {
+    font-size: clamp(55px, 7vw, 85px);
+  }
+
+  /* CTA */
+
+  .gallery-cta {
+    padding: 110px 0 130px;
+  }
+
+  .gallery-cta h2 {
+    font-size: clamp(65px, 9vw, 110px);
+  }
+}
+
+
+/* =====================================================
+   TABLET LANDSCAPE
+   768px - 900px
+===================================================== */
+
+@media screen and (min-width: 768px) and (max-width: 900px) {
+
+  .gallery-container {
+    width: calc(100% - 60px);
+    max-width: 760px;
+  }
+
+  /* HERO */
+
+  .gallery-hero {
+    min-height: 82vh;
+    padding: 110px 0 45px;
+  }
+
+  .gallery-hero-content {
+    min-height: 58vh;
+    padding: 55px 0;
+  }
+
+  .gallery-hero h1 {
+    font-size: clamp(72px, 13vw, 105px);
+    letter-spacing: -5px;
+  }
+
+  .gallery-hero-content p {
+    max-width: 440px;
+    margin: 35px 0 28px;
+    font-size: 12px;
+    line-height: 1.9;
+  }
+
+  /* INTRO */
+
+  .gallery-intro {
+    padding: 100px 0;
+  }
+
+  .gallery-intro-grid,
+  .gallery-philosophy-grid {
+    grid-template-columns: 135px minmax(0, 1fr);
+    gap: 45px;
+  }
+
+  .gallery-intro-content h2 {
+    font-size: clamp(48px, 7vw, 70px);
+    letter-spacing: -3px;
+  }
+
+  /* COLLECTION */
+
+  .gallery-collection {
+    padding: 100px 0;
+  }
+
+  .gallery-heading {
+    margin-bottom: 55px;
+  }
+
+  .gallery-heading h2 {
+    font-size: clamp(48px, 7vw, 70px);
+    letter-spacing: -3px;
+  }
+
+  .gallery-heading-side span {
+    font-size: 30px;
+  }
+
+  /* GRID */
+
+  .gallery-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 50px 22px;
+    height: auto;
+  }
+
+  .gallery-image {
+    aspect-ratio: 4 / 5;
+  }
+
+  .gallery-card-details {
+    min-height: 68px;
+  }
+
+  .gallery-card-details h3 {
+    font-size: 20px;
+  }
+
+  /* PHILOSOPHY */
+
+  .gallery-philosophy {
+    padding: 100px 0;
+  }
+
+  .gallery-philosophy h2 {
+    font-size: clamp(50px, 7vw, 75px);
+    letter-spacing: -3px;
+  }
+
+  .gallery-philosophy p {
+    max-width: 560px;
+  }
+
+  /* CTA */
+
+  .gallery-cta {
+    padding: 100px 0 120px;
+  }
+
+  .gallery-cta-content {
+    padding-top: 80px;
+  }
+
+  .gallery-cta h2 {
+    font-size: clamp(60px, 9vw, 100px);
+    letter-spacing: -4px;
+  }
+}
+
+
+/* =====================================================
+   TABLET PORTRAIT
+   601px - 767px
+===================================================== */
+
+@media screen and (min-width: 601px) and (max-width: 767px) {
+
+  .gallery-container {
+    width: calc(100% - 50px);
+    max-width: 680px;
+  }
+
+  /* HERO */
+
+  .gallery-hero {
+    min-height: 80vh;
+    padding: 105px 0 40px;
+  }
+
+  .gallery-hero-content {
+    min-height: 56vh;
+    padding: 50px 0;
+  }
+
+  .gallery-hero h1 {
+    font-size: clamp(68px, 14vw, 95px);
+    letter-spacing: -4px;
+  }
+
+  .gallery-hero-content p {
+    max-width: 430px;
+    margin: 32px 0 26px;
+    font-size: 12px;
+    line-height: 1.9;
+  }
+
+  /* INTRO */
+
+  .gallery-intro {
+    padding: 90px 0;
+  }
+
+  .gallery-intro-grid,
+  .gallery-philosophy-grid {
+    grid-template-columns: 120px minmax(0, 1fr);
+    gap: 35px;
+  }
+
+  .gallery-intro-content h2 {
+    font-size: clamp(45px, 8vw, 65px);
+    letter-spacing: -3px;
+  }
+
+  .gallery-intro-content p {
+    font-size: 12px;
+    line-height: 1.85;
+  }
+
+  /* COLLECTION */
+
+  .gallery-collection {
+    padding: 90px 0;
+  }
+
+  .gallery-heading {
+    margin-bottom: 45px;
+  }
+
+  .gallery-heading h2 {
+    font-size: clamp(45px, 8vw, 65px);
+    letter-spacing: -3px;
+  }
+
+  .gallery-heading-side {
+    display: none;
+  }
+
+  /* GRID */
+
+  .gallery-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 45px 18px;
+    height: auto;
+  }
+
+  .gallery-image {
+    aspect-ratio: 4 / 5;
+  }
+
+  .gallery-card-details {
+    min-height: 65px;
+    padding-top: 15px;
+  }
+
+  .gallery-card-details h3 {
+    font-size: 19px;
+  }
+
+  .gallery-category {
+    font-size: 7px;
+    letter-spacing: 1.6px;
+  }
+
+  /* PHILOSOPHY */
+
+  .gallery-philosophy {
+    padding: 90px 0;
+  }
+
+  .gallery-philosophy h2 {
+    font-size: clamp(48px, 8vw, 68px);
+    letter-spacing: -3px;
+  }
+
+  .gallery-philosophy p {
+    margin-top: 35px;
+    font-size: 12px;
+    line-height: 1.85;
+  }
+
+  /* CTA */
+
+  .gallery-cta {
+    padding: 90px 0 110px;
+  }
+
+  .gallery-cta-content {
+    padding-top: 65px;
+  }
+
+  .gallery-cta h2 {
+    font-size: clamp(55px, 10vw, 80px);
+    letter-spacing: -3px;
+  }
+
+  .gallery-cta-button {
+    width: 125px;
+    height: 125px;
+    margin-top: 45px;
+  }
+}
+
+
+/* =====================================================
+   MOBILE
+   0px - 600px
+===================================================== */
+
+@media screen and (max-width: 600px) {
+
+  .gallery-container {
+    width: calc(100% - 36px);
+    max-width: none;
+  }
+
+  /* =================================================
+     HERO
+  ================================================= */
+
+  .gallery-hero {
+    min-height: 88svh;
+    padding: 90px 0 35px;
+  }
+
+  .gallery-top-line {
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    font-size: 6.5px;
+    letter-spacing: 1.8px;
+  }
+
+  .gallery-top-line span:nth-child(2) {
+    display: none;
+  }
+
+  .gallery-top-line span:last-child {
+    text-align: right;
+  }
+
+  .gallery-hero-content {
+    min-height: 66svh;
+    padding: 45px 0;
+  }
+
+  .gallery-label {
+    margin-bottom: 20px;
+    font-size: 8px;
+    letter-spacing: 2.5px;
+  }
+
+  .gallery-hero h1 {
+    font-size: clamp(58px, 19vw, 88px);
+    line-height: 0.86;
+    letter-spacing: -4px;
+  }
+
+  .gallery-hero-content p {
+    width: 100%;
+    max-width: 430px;
+    margin: 30px 0 25px;
+    font-size: 11px;
+    line-height: 1.85;
+  }
+
+  .gallery-explore {
+    gap: 10px;
+    font-size: 8px;
+    letter-spacing: 1.6px;
+  }
+
+  .gallery-explore svg {
+    width: 16px;
+    height: 16px;
+  }
+
+  .gallery-hero-bottom {
+    grid-template-columns: auto 1fr;
+    gap: 12px;
+    font-size: 6.5px;
+    letter-spacing: 1.5px;
+  }
+
+  .gallery-hero-bottom span:last-child {
+    display: none;
+  }
+
+
+  /* =================================================
+     INTRO
+  ================================================= */
+
+  .gallery-intro {
+    padding: 80px 0;
+  }
+
+  .gallery-intro-grid {
+    display: block;
+  }
+
+  .gallery-index {
+    margin-bottom: 38px;
+    gap: 9px;
+  }
+
+  .gallery-index span {
+    font-size: 19px;
+  }
+
+  .gallery-index small {
+    font-size: 7px;
+    letter-spacing: 1.7px;
+  }
+
+  .gallery-intro-content {
+    width: 100%;
+  }
+
+  .gallery-intro-content h2 {
+    font-size: clamp(43px, 13vw, 58px);
+    line-height: 0.94;
+    letter-spacing: -2.5px;
+  }
+
+  .gallery-intro-content p {
+    width: 100%;
+    margin-top: 30px;
+    font-size: 11px;
+    line-height: 1.9;
+  }
+
+
+  /* =================================================
+     COLLECTION
+  ================================================= */
+
+  .gallery-collection {
+    padding: 80px 0;
+  }
+
+  .gallery-heading {
+    display: block;
+    margin-bottom: 42px;
+  }
+
+  .gallery-heading h2 {
+    font-size: clamp(43px, 13vw, 58px);
+    line-height: 0.94;
+    letter-spacing: -2.5px;
+  }
+
+  .gallery-heading-side {
+    display: none;
+  }
+
+
+  /* =================================================
+     MOBILE GRID
+  ================================================= */
+
+  .gallery-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 48px;
+    width: 100%;
+    height: auto;
+  }
+
+  .gallery-card {
+    width: 100%;
+    min-width: 0;
+  }
+
+  .gallery-card-inner {
+    width: 100%;
+    transform: none !important;
+  }
+
+  .gallery-image {
+    width: 100%;
+    aspect-ratio: 4 / 5;
+    overflow: hidden;
+  }
+
+  .gallery-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    transform: none !important;
+  }
+
+  .gallery-number {
+    top: 13px;
+    left: 13px;
+    width: 31px;
+    height: 31px;
+    font-size: 7px;
+  }
+
+  /* Disable desktop hover overlay on touch devices */
+
+  .gallery-overlay {
+    display: none;
+  }
+
+
+  /* =================================================
+     CARD DETAILS
+  ================================================= */
+
+  .gallery-card-details {
+    min-height: 65px;
+    padding-top: 14px;
+  }
+
+  .gallery-category {
+    margin-bottom: 6px;
+    font-size: 7px;
+    letter-spacing: 1.5px;
+  }
+
+  .gallery-card-details h3 {
+    font-size: 20px;
+    line-height: 1.15;
+  }
+
+  .gallery-card-details > svg {
+    width: 15px;
+    height: 15px;
+    margin-top: 4px;
+  }
+
+
+  /* =================================================
+     PHILOSOPHY
+  ================================================= */
+
+  .gallery-philosophy {
+    padding: 80px 0;
+  }
+
+  .gallery-philosophy-grid {
+    display: block;
+  }
+
+  .gallery-philosophy h2 {
+    font-size: clamp(44px, 13vw, 60px);
+    line-height: 0.94;
+    letter-spacing: -2.5px;
+  }
+
+  .gallery-philosophy p {
+    width: 100%;
+    margin-top: 30px;
+    font-size: 11px;
+    line-height: 1.9;
+  }
+
+
+  /* =================================================
+     CTA
+  ================================================= */
+
+  .gallery-cta {
+    padding: 80px 0 100px;
+  }
+
+  .gallery-cta-top {
+    padding-bottom: 18px;
+    font-size: 6.5px;
+    letter-spacing: 1.5px;
+  }
+
+  .gallery-cta-content {
+    padding-top: 60px;
+  }
+
+  .gallery-cta h2 {
+    font-size: clamp(48px, 14vw, 65px);
+    line-height: 0.94;
+    letter-spacing: -3px;
+  }
+
+  .gallery-cta-button {
+    width: 120px;
+    height: 120px;
+    margin-top: 45px;
+    gap: 10px;
+    font-size: 7px;
+    letter-spacing: 1.5px;
+  }
+
+  .gallery-cta-button svg {
+    width: 17px;
+    height: 17px;
+  }
+
+
+  /* =================================================
+     LIGHTBOX
+  ================================================= */
+
+  .gallery-lightbox {
+    padding: 15px;
+  }
+
+  .gallery-lightbox-close {
+    top: 14px;
+    right: 14px;
+    width: 40px;
+    height: 40px;
+  }
+
+  .gallery-lightbox-box {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .gallery-lightbox-box img {
+    width: 100%;
+    max-width: 100%;
+    max-height: 72svh;
+    object-fit: contain;
+  }
+
+  .gallery-lightbox-info {
+    align-items: flex-start;
+    gap: 15px;
+    padding-top: 14px;
+  }
+
+  .gallery-lightbox-info > span {
+    flex: 0 0 auto;
+    font-size: 7px;
+  }
+
+  .gallery-lightbox-info small {
+    font-size: 7px;
+    letter-spacing: 1.5px;
+  }
+
+  .gallery-lightbox-info h3 {
+    font-size: 20px;
+    line-height: 1.15;
+  }
+}
+
+
+/* =====================================================
+   SMALL MOBILE
+   0px - 420px
+===================================================== */
+
+@media screen and (max-width: 420px) {
+
+  .gallery-container {
+    width: calc(100% - 30px);
+  }
+
+  .gallery-hero {
+    padding-top: 82px;
+  }
+
+  .gallery-hero h1 {
+    font-size: clamp(53px, 18vw, 72px);
+    letter-spacing: -3px;
+  }
+
+  .gallery-hero-content {
+    min-height: 64svh;
+  }
+
+  .gallery-hero-content p {
+    font-size: 10.5px;
+    line-height: 1.8;
+  }
+
+  .gallery-intro,
+  .gallery-collection,
+  .gallery-philosophy {
+    padding: 70px 0;
+  }
+
+  .gallery-intro-content h2,
+  .gallery-heading h2,
+  .gallery-philosophy h2 {
+    font-size: clamp(40px, 13vw, 54px);
+    letter-spacing: -2px;
+  }
+
+  .gallery-grid {
+    gap: 42px;
+  }
+
+  .gallery-image {
+    aspect-ratio: 4 / 5;
+  }
+
+  .gallery-card-details h3 {
+    font-size: 18px;
+  }
+
+  .gallery-cta {
+    padding: 70px 0 90px;
+  }
+
+  .gallery-cta h2 {
+    font-size: clamp(44px, 14vw, 58px);
+  }
+
+  .gallery-cta-button {
+    width: 110px;
+    height: 110px;
+  }
+}
+
+
+/* =====================================================
+   VERY SMALL MOBILE
+   0px - 360px
+===================================================== */
+
+@media screen and (max-width: 360px) {
+
+  .gallery-container {
+    width: calc(100% - 24px);
+  }
+
+  .gallery-top-line {
+    font-size: 6px;
+    letter-spacing: 1.2px;
+  }
+
+  .gallery-hero h1 {
+    font-size: 52px;
+    letter-spacing: -2.5px;
+  }
+
+  .gallery-hero-content p {
+    font-size: 10px;
+  }
+
+  .gallery-intro-content h2,
+  .gallery-heading h2,
+  .gallery-philosophy h2 {
+    font-size: 40px;
+  }
+
+  .gallery-card-details h3 {
+    font-size: 17px;
+  }
+
+  .gallery-cta h2 {
+    font-size: 43px;
+  }
+}
+
+
+/* =====================================================
+   TOUCH DEVICES
+   Prevent desktop hover effects
+===================================================== */
+
+@media (hover: none) and (pointer: coarse) {
+
+  .gallery-card:hover .gallery-card-inner {
+    transform: none;
+  }
+
+  .gallery-card:hover .gallery-image img {
+    transform: none;
+  }
+
+  .gallery-card:hover .gallery-overlay {
+    opacity: 0;
+  }
+
+  .gallery-card:hover .gallery-card-details > svg {
+    transform: none;
+  }
+
+  .gallery-explore:hover svg {
+    transform: none;
+  }
+
+  .gallery-cta-button:hover {
+    background: transparent;
+    color: var(--dark);
+    transform: none;
+  }
+
+  .gallery-cta-button:hover svg {
+    transform: none;
+  }
+}
+
+
+/* =====================================================
+   REDUCED MOTION
+===================================================== */
+
+@media (prefers-reduced-motion: reduce) {
+
+  .gallery-card-inner,
+  .gallery-image img,
+  .gallery-overlay,
+  .gallery-cta-button,
+  .gallery-cta-button svg,
+  .gallery-explore svg,
+  .gallery-card-details > svg {
+    transition: none !important;
+  }
+
+  .gallery-card:hover .gallery-card-inner {
+    transform: none !important;
+  }
+
+  .gallery-card:hover .gallery-image img {
+    transform: none !important;
+  }
+
+  .gallery-lightbox {
+    animation: none !important;
+  }
+}
