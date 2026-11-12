@@ -21,6 +21,25 @@ function Navbar() {
     };
   }, []);
 
+  // Prevent the page behind the mobile navigation from scrolling.
+  useEffect(() => {
+    document.body.style.overflow = menuOpen ? "hidden" : "";
+
+    const handleKeyDown = (event) => {
+      if (event.key === "Escape") {
+        setMenuOpen(false);
+        setActiveDropdown(null);
+      }
+    };
+
+    window.addEventListener("keydown", handleKeyDown);
+
+    return () => {
+      document.body.style.overflow = "";
+      window.removeEventListener("keydown", handleKeyDown);
+    };
+  }, [menuOpen]);
+
   const closeMenu = () => {
     setMenuOpen(false);
     setActiveDropdown(null);
@@ -149,10 +168,7 @@ function Navbar() {
                 }
                 
               >
-                  <Link
-              to="/weddings" 
-              onClick={closeMenu}
-            >  Weddings </Link>
+                  Weddings
 
                 <span className="dropdown-arrow">
                   ↓
@@ -445,7 +461,9 @@ function Navbar() {
               menuOpen ? "menu-open" : ""
             }`}
             onClick={() => setMenuOpen(!menuOpen)}
-            aria-label="Toggle menu"
+            aria-label={menuOpen ? "Close menu" : "Open menu"}
+            aria-expanded={menuOpen}
+            aria-controls="onair-mobile-menu"
           >
             <span></span>
             <span></span>
@@ -458,6 +476,8 @@ function Navbar() {
       {/* ================= MOBILE MENU ================= */}
 
       <div
+        id="onair-mobile-menu"
+        aria-label="Mobile navigation"
         className={`mobile-menu ${
           menuOpen ? "mobile-menu-open" : ""
         }`}
@@ -495,17 +515,23 @@ function Navbar() {
               <b>↗</b>
             </Link>
 
+            <Link to="/gallery" onClick={closeMenu}>
+              <span>05</span>
+              Gallery
+              <b>↗</b>
+            </Link>
+
             <Link
               to="/wedding-stories"
               onClick={closeMenu}
             >
-              <span>05</span>
+              <span>06</span>
               Wedding Stories
               <b>↗</b>
             </Link>
 
             <Link to="/about" onClick={closeMenu}>
-              <span>06</span>
+              <span>07</span>
               About Us
               <b>↗</b>
             </Link>
@@ -514,13 +540,13 @@ function Navbar() {
               to="/testimonials"
               onClick={closeMenu}
             >
-              <span>07</span>
+              <span>08</span>
               Testimonials
               <b>↗</b>
             </Link>
 
             <Link to="/blog" onClick={closeMenu}>
-              <span>08</span>
+              <span>09</span>
               Blog
               <b>↗</b>
             </Link>
